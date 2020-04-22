@@ -516,7 +516,7 @@ spec:
     spec:
       containers:
         - name: dynatrace-oneagent-operator
-          image: docker.io/dynatrace/dynatrace-oneagent-operator:snapshot
+          image: docker.io/dynatrace/dynatrace-oneagent-operator:snapshot-feature-webhook-corrections-amd64
           imagePullPolicy: Always
           env:
             - name: WATCH_NAMESPACE
@@ -769,7 +769,7 @@ spec:
         - name: webhook
           args:
             - /usr/local/bin/dynatrace/oneagent/webhook-server
-          image: docker.io/dynatrace/dynatrace-oneagent-operator:snapshot
+          image: docker.io/dynatrace/dynatrace-oneagent-operator:snapshot-feature-webhook-corrections-amd64
           imagePullPolicy: Always
           env:
             - name: WATCH_NAMESPACE
@@ -803,7 +803,7 @@ spec:
         - name: bootstrapper
           args:
             - /usr/local/bin/dynatrace/oneagent/webhook-bootstrapper
-          image: docker.io/dynatrace/dynatrace-oneagent-operator:snapshot
+          image: docker.io/dynatrace/dynatrace-oneagent-operator:snapshot-feature-webhook-corrections-amd64
           imagePullPolicy: Always
           env:
             - name: WATCH_NAMESPACE
